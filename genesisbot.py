@@ -7,8 +7,7 @@ def generate_model(cfdist, word, num=15):
         word = cfdist[word].max()
 
 
-with open('trammels.txt') as f:
-    text = f.read().split()
+text = nltk.corpus.genesis.words('english-kjv.txt')
 bigrams = nltk.bigrams(text)
 cfd = nltk.ConditionalFreqDist(bigrams)
 
